@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </header>
+        <section>
+            <img src="./2203_w023_n001_2023b_p1_2023-ai.jpg" class="one">
+            
+            <a href="#" class="btn">Explore</a>
+            <img src="./2203_w023_n001_2023b_p1_2023-ai.png"class="two" > 
+            <h2 class="adv">Adventure</h2> 
+            <img src="./2203_w023_n001_2023b_p1_2023-ai (1).png" class="three">   
+        </section>   
+    <div class="text"><h2>Parallax Effect</h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ea vel quaerat ad accusamus voluptas ab saepe maiores, excepturi commodi facilis, porro, ipsa earum iste. Molestias eligendi repudiandae ad ipsum.
+        <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nobis odio vero rerum ratione corrupti quis voluptatibus accusamus, necessitatibus aspernatur? Sequi, officiis. Mollitia nihil, sapiente aspernatur nulla animi hic laborum? <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aliquid magni vitae, animi neque corrupti commodi in veritatis libero. Est provident eaque amet dicta repellendus in rerum itaque ullam deserunt.
+    </div>
+    <script>
+        let bac = document.querySelector('.one')
+        let beach = document.querySelector('.two')
+        let front = document.querySelector('.three')
+        let button = document.querySelector('.btn')
+        let adv = document.querySelector('.adv')
+        let text =document.querySelector('.text')
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY
+            bac.style.left = value*5+'px'
+            adv.style.marginBottom = value*5+'px'
+            front.style.bottom = value*0+'px'
+            beach.style.right= value*0.5 +'px'
+            button.style.marginRight = -1500+value*15 +'px'
+        })
+    </script>
+</body>
+</html>
